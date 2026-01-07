@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Imagen Decorativa con Rosas</title>
+    <title>4 Ojos</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
@@ -14,13 +14,30 @@
         
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
             min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
             overflow-x: hidden;
             padding: 20px;
+            position: relative;
+            background-color: #f0f8ff;
+        }
+        
+        /* Fondo con emojis de risa */
+        body::before {
+            content: "😂🤣😆😄😁";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            font-size: 24px;
+            opacity: 0.15;
+            line-height: 1.5;
+            word-wrap: break-word;
+            z-index: -1;
+            pointer-events: none;
         }
         
         .container {
@@ -35,8 +52,9 @@
         h1 {
             color: #333;
             margin-bottom: 40px;
-            font-size: 2.5rem;
-            text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+            font-size: 3rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+            font-weight: bold;
         }
         
         .image-container {
@@ -52,15 +70,15 @@
             max-width: 500px;
             height: auto;
             border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-            border: 8px solid white;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            border: 10px solid white;
             position: relative;
             z-index: 2;
             transition: transform 0.3s ease;
         }
         
         .main-image:hover {
-            transform: scale(1.02);
+            transform: scale(1.03);
         }
         
         .rose {
@@ -69,53 +87,32 @@
             z-index: 1;
             animation: float 6s infinite ease-in-out;
             opacity: 0.9;
+            cursor: pointer;
         }
         
-        /* Posicionamiento de los textos */
-        .text-label {
-            position: absolute;
+        /* Fondo de texto repetido */
+        .text-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+            opacity: 0.1;
+            font-size: 80px;
             font-weight: bold;
-            font-size: 1.2rem;
             color: #333;
-            background-color: rgba(255, 255, 255, 0.8);
-            padding: 8px 15px;
-            border-radius: 20px;
-            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-            z-index: 3;
-            min-width: 120px;
-            text-align: center;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
         }
         
-        /* Posiciones específicas para los textos */
-        .four-eyes {
-            top: 10%;
-            left: 15%;
-            transform: rotate(-5deg);
-        }
-        
-        .whale {
-            top: 10%;
-            right: 15%;
-            transform: rotate(5deg);
-        }
-        
-        .globe-fish {
-            bottom: 15%;
-            left: 20%;
-            transform: rotate(-3deg);
-        }
-        
-        .instructions {
-            margin-top: 40px;
-            color: #555;
-            font-size: 1.1rem;
-            line-height: 1.6;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-            background-color: rgba(255, 255, 255, 0.7);
+        .bg-text {
             padding: 20px;
-            border-radius: 10px;
+            transform: rotate(-25deg);
         }
         
         .footer {
@@ -137,36 +134,45 @@
         /* Ajustes para dispositivos móviles */
         @media (max-width: 768px) {
             h1 {
-                font-size: 1.8rem;
-            }
-            
-            .text-label {
-                font-size: 1rem;
-                padding: 6px 10px;
-                min-width: 100px;
+                font-size: 2.2rem;
             }
             
             .rose {
                 font-size: 1.5rem;
             }
             
-            .four-eyes, .whale {
-                top: 5%;
+            .text-background {
+                font-size: 50px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.8rem;
             }
             
-            .globe-fish {
-                bottom: 10%;
+            .text-background {
+                font-size: 40px;
             }
         }
     </style>
 </head>
 <body>
+    <!-- Fondo con texto "4 Ojos" repetido -->
+    <div class="text-background">
+        <div class="bg-text">4 OJOS&nbsp;&nbsp;&nbsp;&nbsp;4 OJOS&nbsp;&nbsp;&nbsp;&nbsp;4 OJOS</div>
+        <div class="bg-text">4 OJOS&nbsp;&nbsp;&nbsp;&nbsp;4 OJOS&nbsp;&nbsp;&nbsp;&nbsp;4 OJOS</div>
+        <div class="bg-text">4 OJOS&nbsp;&nbsp;&nbsp;&nbsp;4 OJOS&nbsp;&nbsp;&nbsp;&nbsp;4 OJOS</div>
+        <div class="bg-text">4 OJOS&nbsp;&nbsp;&nbsp;&nbsp;4 OJOS&nbsp;&nbsp;&nbsp;&nbsp;4 OJOS</div>
+        <div class="bg-text">4 OJOS&nbsp;&nbsp;&nbsp;&nbsp;4 OJOS&nbsp;&nbsp;&nbsp;&nbsp;4 OJOS</div>
+    </div>
+    
     <div class="container">
-        <h1>Imagen Decorativa con Rosas</h1>
+        <h1>4 OJOS</h1>
         
         <div class="image-container">
             <!-- Imagen central -->
-            <img src="https://i.postimg.cc/Wp0bD5j2/Polish-20251230-205202503.jpg" alt="Imagen central decorativa" class="main-image">
+            <img src="https://i.postimg.cc/Wp0bD5j2/Polish-20251230-205202503.jpg" alt="4 Ojos" class="main-image">
             
             <!-- Rosas decorativas -->
             <div class="rose" style="top: 5%; left: 5%; animation-delay: 0s;">🌹</div>
@@ -181,21 +187,10 @@
             <div class="rose" style="bottom: 10%; right: 5%; animation-delay: 1.2s;">🌹</div>
             <div class="rose" style="bottom: 20%; right: 3%; animation-delay: 2.2s;">🌹</div>
             <div class="rose" style="bottom: 30%; right: 1%; animation-delay: 3.2s;">🌹</div>
-            
-            <!-- Textos en posiciones específicas -->
-            <div class="text-label four-eyes">4 ojos</div>
-            <div class="text-label whale">ballena</div>
-            <div class="text-label globe-fish">pes globo</div>
-        </div>
-        
-        <div class="instructions">
-            <p>Esta página muestra una imagen central decorada con emojis de rosas animadas y textos en posiciones específicas.</p>
-            <p>Los textos "4 ojos", "ballena" y "pes globo" están posicionados alrededor de la imagen central.</p>
-            <p>Las rosas tienen una animación de flotación suave para crear un efecto visual atractivo.</p>
         </div>
         
         <div class="footer">
-            <p>Página creada con HTML, CSS y JavaScript | Imagen alojada en PostImage</p>
+            <p>Página creada con HTML, CSS y JavaScript</p>
         </div>
     </div>
 
@@ -209,10 +204,12 @@
                 rose.addEventListener('mouseenter', function() {
                     this.style.transform = 'scale(1.5)';
                     this.style.transition = 'transform 0.3s';
+                    this.style.zIndex = '10';
                 });
                 
                 rose.addEventListener('mouseleave', function() {
                     this.style.transform = 'scale(1)';
+                    this.style.zIndex = '1';
                 });
                 
                 // Hacer que las rosas sean arrastrables
@@ -247,10 +244,12 @@
                     newRose.addEventListener('mouseenter', function() {
                         this.style.transform = 'scale(1.5)';
                         this.style.transition = 'transform 0.3s';
+                        this.style.zIndex = '10';
                     });
                     
                     newRose.addEventListener('mouseleave', function() {
                         this.style.transform = 'scale(1)';
+                        this.style.zIndex = '1';
                     });
                     
                     newRose.setAttribute('draggable', 'true');
